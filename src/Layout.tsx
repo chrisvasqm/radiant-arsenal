@@ -1,12 +1,20 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, useNavigate } from "react-router-dom"
+import NavBar from "./components/NavBar"
+import { useEffect } from "react";
 
-function App() {
+function Layout() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/agents')
+  }, [navigate])
+
   return (
     <>
-      <div>Radiant Arsenal</div>
+      <NavBar />
       <Outlet />
     </>
   )
 }
 
-export default App
+export default Layout
