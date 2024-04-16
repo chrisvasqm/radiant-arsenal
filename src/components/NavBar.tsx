@@ -1,9 +1,9 @@
-import { Card, Heading } from "@chakra-ui/react"
+import { Card, Typography } from '@mui/material'
 
 const NavBar = () => {
     return (
-        <Card boxShadow={'md'} paddingLeft={3}>
-            <Heading as={'h1'} fontSize={'xl'}>Radiant Arsenal</Heading>
+        <Card square>
+            <Typography variant='h1' fontSize={'2rem'}>Radiant Arsenal</Typography>
         </Card>
     )
 }
