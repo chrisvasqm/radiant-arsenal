@@ -1,5 +1,5 @@
+import { Typography } from '@mui/material'
 import useAgents from "../hooks/useAgents"
-import { Heading, Text } from "@chakra-ui/react"
 
 const AgentsPage = () => {
     const { data: agents, isLoading, error } = useAgents()
@@ -10,8 +10,8 @@ const AgentsPage = () => {
 
     return (
         <>
-            <Heading as={"h1"} size={'lg'} mb={4}>Agents</Heading>
-            {agents?.data.map(agent => <Text key={agent.uuid}>{agent.displayName}</Text>)}
+            <Typography variant='h2' fontSize={'1.5rem'}>Agents</Typography>
+            {agents?.data.map(agent => <Typography key={agent.uuid}>{agent.displayName}</Typography>)}
         </>
     )
 }
