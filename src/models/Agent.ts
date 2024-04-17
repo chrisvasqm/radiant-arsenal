@@ -4,4 +4,5 @@ export interface Agent {
     description: string
     displayIcon: string
     fullPortrait: string
+    isPlayableCharacter: boolean
 }
