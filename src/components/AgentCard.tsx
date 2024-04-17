@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Paper, Typography } from '@mui/material'
 import { Agent } from '../models/Agent'
 
 interface Props {
@@ -7,7 +7,10 @@ interface Props {
 
 const AgentCard = ({ agent }: Props) => {
     return (
-        <Typography key={agent.uuid}>{agent.displayName}</Typography>
+        <Paper className='p-4'>
+            <Typography>{agent.displayName}</Typography>
+            <Typography>{agent.description}</Typography>
+        </Paper>
     )
 }
 
