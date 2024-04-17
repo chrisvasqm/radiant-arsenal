@@ -1,14 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import ApiClient from "../api/client";
 import { Response } from "../api/client";
+import { Agent } from '../models/Agent';
 
 const client = new ApiClient<Response<Agent>>('/agents');
-
-interface Agent {
-    uuid: string
-    displayName: string
-    description: string
-}
 
 const useAgents = () => useQuery({
     queryKey: ['agents'],

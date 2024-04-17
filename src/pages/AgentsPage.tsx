@@ -1,5 +1,6 @@
 import { Typography } from '@mui/material'
 import useAgents from "../hooks/useAgents"
+import AgentCard from '../components/AgentCard'
 
 const AgentsPage = () => {
     const { data: agents, isLoading, error } = useAgents()
@@ -11,7 +12,7 @@ const AgentsPage = () => {
     return (
         <>
             <Typography variant='h2' fontSize={'1.5rem'}>Agents</Typography>
-            {agents?.data.map(agent => <Typography key={agent.uuid}>{agent.displayName}</Typography>)}
+            {agents?.data.map(agent => <AgentCard agent={agent} />)}
         </>
     )
 }
