@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material'
 import useAgents from "../hooks/useAgents"
 import AgentCard from '../components/AgentCard'
+import Grid from '@mui/material/Unstable_Grid2';
 
 const AgentsPage = () => {
     const { data: agents, isLoading, error } = useAgents()
@@ -12,7 +13,13 @@ const AgentsPage = () => {
     return (
         <>
             <Typography variant='h2' fontSize={'1.5rem'}>Agents</Typography>
-            {agents?.data.map(agent => <AgentCard agent={agent} />)}
+            <Grid container spacing={2} columns={{ xs: 1, sm: 8, md: 12 }}>
+                {agents?.data.map(agent => (
+                    <Grid xs={2} sm={4} md={4} key={agent.uuid}>
+                        <AgentCard agent={agent} />
+                    </Grid>
+                ))}
+            </Grid>
         </>
     )
 }
