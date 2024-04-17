@@ -9,7 +9,7 @@ const AgentCard = ({ agent }: Props) => {
     return (
         <Paper className='p-4 space-y-2'>
             <div className='flex justify-center'>
-                <img src={agent.displayIcon} />
+                <img src={agent.fullPortrait} />
             </div>
             <Typography variant='h2' fontSize={'1.3rem'}>{agent.displayName}</Typography>
             <Typography>{agent.description}</Typography>
