@@ -8,6 +8,9 @@ interface Props {
 const AgentCard = ({ agent }: Props) => {
     return (
         <Paper className='p-4'>
+            <div className='flex justify-center'>
+                <img src={agent.displayIcon} />
+            </div>
             <Typography>{agent.displayName}</Typography>
             <Typography>{agent.description}</Typography>
         </Paper>
