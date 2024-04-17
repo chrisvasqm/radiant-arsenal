@@ -1,20 +1,34 @@
-import { Paper, Typography } from '@mui/material'
-import { Agent } from '../models/Agent'
+import { Paper, Typography } from '@mui/material';
+import { Agent } from '../models/Agent';
 
 interface Props {
-    agent: Agent
+    agent: Agent;
 }
 
 const AgentCard = ({ agent }: Props) => {
     return (
-        <Paper className='p-4 space-y-2'>
-            <div className='flex justify-center'>
-                <img src={agent.fullPortrait} />
+        <Paper
+            className="p-4 space-y-2"
+            sx={{
+                backgroundImage: `linear-gradient(to top, rgba(254, 70, 84, 0.8), transparent), url(${agent.fullPortrait})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                width: 300, // Adjust the width as needed
+                height: 400, // Adjust the height as needed
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+            }}
+        >
+            <div>
+                <Typography variant="h2" fontSize="1.3rem" color="white">
+                    {agent.displayName}
+                </Typography>
+                <Typography color="white">{agent.description}</Typography>
             </div>
-            <Typography variant='h2' fontSize={'1.3rem'}>{agent.displayName}</Typography>
-            <Typography>{agent.description}</Typography>
         </Paper>
-    )
-}
+    );
+};
 
-export default AgentCard
+export default AgentCard;
