@@ -10,7 +10,7 @@ const AgentCard = ({ agent }: Props) => {
         <Paper
             className="p-4 space-y-2"
             sx={{
-                backgroundImage: `linear-gradient(to top, rgba(254, 70, 84, 0.8), transparent), url(${agent.fullPortrait})`,
+                backgroundImage: `url(${agent.fullPortrait})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 width: 300, // Adjust the width as needed
@@ -19,6 +19,9 @@ const AgentCard = ({ agent }: Props) => {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'flex-end',
+                '&:hover': {
+                    backgroundImage: `linear-gradient(to top, rgba(254, 70, 84, 0.8), transparent), url(${agent.fullPortrait})`
+                },
             }}
         >
             <div>
