@@ -30,7 +30,7 @@ const AgentCard = ({ agent }: Props) => {
                 }}
             >
                 <div>
-                    <Typography variant="h2" fontSize="1.3rem" color="white">
+                    <Typography variant="h2" fontSize="2rem" color="white" mb={2} fontWeight={'bold'}>
                         {agent.displayName}
                     </Typography>
                 </div>
