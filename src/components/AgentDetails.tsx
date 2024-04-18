@@ -1,6 +1,7 @@
 import { Stack, Typography } from '@mui/material'
 import { Agent } from '../models/Agent'
 import AgentTitle from './AgentTitle'
+import AgentAbilities from './AgentAbilities'
 
 interface Props {
     agent?: Agent
@@ -15,10 +16,16 @@ const AgentDetails = ({ agent }: Props) => {
                     <Stack direction={'row'} gap={2}>
                         <AgentTitle displayName={agent?.displayName} />
                         <Typography>|</Typography>
-                        <Typography>{agent?.role.displayName}</Typography>
+                        <Typography color={'#DA414E'}>{agent?.role.displayName}</Typography>
                     </Stack>
                     <Typography>{agent?.description}</Typography>
                 </Stack>
+            </Stack>
+
+            <Stack mt={4}>
+                <Typography variant='h3' fontWeight={'bold'} color={'#DA414E'}>Abilities</Typography>
+
+                <AgentAbilities abilities={agent?.abilities} />
             </Stack>
         </>
     )
