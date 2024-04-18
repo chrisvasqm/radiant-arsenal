@@ -1,7 +1,6 @@
-import { Typography } from '@mui/material'
-import useAgents from "../hooks/useAgents"
-import AgentCard from '../components/AgentCard'
 import Grid from '@mui/material/Unstable_Grid2';
+import AgentCard from '../components/AgentCard';
+import useAgents from "../hooks/useAgents";
 
 const AgentsPage = () => {
     const { data: agents, isLoading, error } = useAgents()
@@ -12,7 +11,6 @@ const AgentsPage = () => {
 
     return (
         <>
-            <Typography variant='h2' fontSize={'1.5rem'}>Agents</Typography>
             <Grid container spacing={2} columns={{ xs: 1, sm: 8, md: 12 }}>
                 {agents?.data.map(agent => (
                     agent.isPlayableCharacter &&

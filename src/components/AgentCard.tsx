@@ -1,5 +1,6 @@
 import { Paper, Typography } from '@mui/material';
 import { Agent } from '../models/Agent';
+import { grey } from '@mui/material/colors';
 
 interface Props {
     agent: Agent;
@@ -10,6 +11,7 @@ const AgentCard = ({ agent }: Props) => {
         <Paper
             className="p-4 space-y-2"
             sx={{
+                backgroundColor: grey[900],
                 backgroundImage: `url(${agent.fullPortrait})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
@@ -30,7 +32,7 @@ const AgentCard = ({ agent }: Props) => {
                 </Typography>
                 <Typography color="white">{agent.description}</Typography>
             </div>
-        </Paper>
+        </Paper >
     );
 };
 
