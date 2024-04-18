@@ -23,6 +23,8 @@ const AgentCard = ({ agent }: Props) => {
                 justifyContent: 'flex-end',
                 '&:hover': {
                     backgroundImage: `linear-gradient(to top, rgba(254, 70, 84, 0.8), transparent 60%), url(${agent.fullPortrait})`,
+                    border: 'solid 4px rgba(254, 70, 84, 0.8)',
+                    borderRadius: 0
                 },
             }}
         >
