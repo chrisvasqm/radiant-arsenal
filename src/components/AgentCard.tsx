@@ -4,11 +4,12 @@ import { grey } from '@mui/material/colors';
 
 interface Props {
     agent: Agent;
+    onSelectAgent: (agent: Agent) => void;
 }
 
-const AgentCard = ({ agent }: Props) => {
+const AgentCard = ({ agent, onSelectAgent }: Props) => {
     return (
-        <div style={{ cursor: 'pointer' }}>
+        <div style={{ cursor: 'pointer' }} onClick={() => onSelectAgent(agent)}>
             <Paper
                 className="p-4 space-y-2"
                 sx={{
@@ -30,8 +31,8 @@ const AgentCard = ({ agent }: Props) => {
                 }}
             >
                 <div>
-                    <Typography variant="h2" fontSize="2rem" color="white" mb={2} fontWeight={'bold'}>
-                        {agent.displayName}
+                    <Typography variant="h2" fontSize="1.5rem" color="white" mb={2} fontWeight={'bold'}>
+                        {agent.displayName.toUpperCase()}
                     </Typography>
                 </div>
             </Paper >
