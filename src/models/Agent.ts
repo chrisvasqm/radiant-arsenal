@@ -5,4 +5,5 @@ export interface Agent {
     displayIcon: string
     fullPortrait: string
     isPlayableCharacter: boolean
+    role: { displayName: string }
 }
