@@ -8,7 +8,7 @@ interface Props {
 
 const AgentCard = ({ agent }: Props) => {
     return (
-        <div>
+        <div style={{ cursor: 'pointer' }}>
             <Paper
                 className="p-4 space-y-2"
                 sx={{
