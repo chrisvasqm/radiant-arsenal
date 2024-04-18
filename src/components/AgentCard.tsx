@@ -31,7 +31,13 @@ const AgentCard = ({ agent, onSelectAgent }: Props) => {
                 }}
             >
                 <div>
-                    <Typography variant="h2" fontSize="1.5rem" color="white" mb={2} fontWeight={'bold'}>
+                    <Typography
+                        variant="h2"
+                        fontSize="1.5rem"
+                        color="white"
+                        mb={2}
+                        fontWeight={'bold'}
+                        letterSpacing={2}>
                         {agent.displayName.toUpperCase()}
                     </Typography>
                 </div>
