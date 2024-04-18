@@ -14,9 +14,9 @@ const AgentDetails = ({ agent }: Props) => {
                 <img src={agent?.displayIcon} width={'20%'} height={'20%'} />
                 <Stack ml={2}>
                     <Stack direction={'row'} gap={2}>
-                        <AgentTitle displayName={agent?.displayName} />
+                        <Typography fontWeight={'bold'} color={'#DA414E'}>{agent?.role.displayName}</Typography>
                         <Typography>|</Typography>
-                        <Typography color={'#DA414E'}>{agent?.role.displayName}</Typography>
+                        <AgentTitle displayName={agent?.displayName} />
                     </Stack>
                     <Typography>{agent?.description}</Typography>
                 </Stack>
