@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import AgentCard from '../components/AgentCard';
+import AgentDetails from '../components/AgentDetails';
 import useAgents from "../hooks/useAgents";
-import { Typography } from '@mui/material';
 import { Agent } from '../models/Agent';
 
 const AgentsPage = () => {
@@ -21,7 +21,7 @@ const AgentsPage = () => {
                 ))}
             </div>
 
-            <Typography>{selectedAgent?.displayName}</Typography>
+            <AgentDetails agent={selectedAgent} />
         </>
     )
 }
