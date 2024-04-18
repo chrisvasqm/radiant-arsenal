@@ -30,7 +30,6 @@ const AgentCard = ({ agent }: Props) => {
                 <Typography variant="h2" fontSize="1.3rem" color="white">
                     {agent.displayName}
                 </Typography>
-                <Typography color="white">{agent.description}</Typography>
             </div>
         </Paper >
     );
