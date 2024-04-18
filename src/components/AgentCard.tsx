@@ -15,8 +15,8 @@ const AgentCard = ({ agent }: Props) => {
                 backgroundImage: `url(${agent.fullPortrait})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                width: 300, // Adjust the width as needed
-                height: 400, // Adjust the height as needed
+                width: 200, 
+                height: 500,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
