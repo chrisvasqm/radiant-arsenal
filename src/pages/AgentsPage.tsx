@@ -14,7 +14,7 @@ const AgentsPage = () => {
 
     return (
         <>
-            <div className='flex space-x-4'>
+            <div className='flex space-x-4 overflow-x-auto'>
                 {agents?.data.map(agent => (
                     agent.isPlayableCharacter &&
                     <AgentCard agent={agent} onSelectAgent={agent => setSelectedAgent(agent)} />
