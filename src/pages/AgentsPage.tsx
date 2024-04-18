@@ -12,9 +12,7 @@ const AgentsPage = () => {
         <div className='flex space-x-4'>
             {agents?.data.map(agent => (
                 agent.isPlayableCharacter &&
-                <div>
-                    <AgentCard agent={agent} />
-                </div>
+                <AgentCard agent={agent} />
             ))}
         </div>
     )
