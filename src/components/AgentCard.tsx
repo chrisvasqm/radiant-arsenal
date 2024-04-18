@@ -17,7 +17,7 @@ const AgentCard = ({ agent }: Props) => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     width: 200,
-                    height: 500,
+                    height: 350,
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
