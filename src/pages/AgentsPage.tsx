@@ -3,6 +3,7 @@ import AgentCard from '../components/AgentCard';
 import AgentDetails from '../components/AgentDetails';
 import useAgents from "../hooks/useAgents";
 import { Agent } from '../models/Agent';
+import { Box } from '@mui/material';
 
 const AgentsPage = () => {
     const { data: agents, isLoading, error } = useAgents()
@@ -21,12 +22,26 @@ const AgentsPage = () => {
 
     return (
         <>
-            <div className='flex space-x-4 overflow-x-auto'>
+            <Box className='flex space-x-4 overflow-x-auto' sx={{
+                scrollbarWidth: 'thin',
+                '&::-webkit-scrollbar': {
+                    width: '0.4em',
+                },
+                '&::-webkit-scrollbar-track': {
+                    background: "#f1f1f1",
+                },
+                '&::-webkit-scrollbar-thumb': {
+                    backgroundColor: '#888',
+                },
+                '&::-webkit-scrollbar-thumb:hover': {
+                    background: '#555'
+                }
+            }}>
                 {sortedAgents?.map(agent => (
                     agent.isPlayableCharacter &&
                     <AgentCard agent={agent} onSelectAgent={agent => setSelectedAgent(agent)} />
                 ))}
-            </div>
+            </Box>
 
             <AgentDetails agent={selectedAgent} />
         </>
