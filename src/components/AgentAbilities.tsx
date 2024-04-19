@@ -1,4 +1,4 @@
-import { Stack, Typography } from '@mui/material'
+import { Grid, Stack, Typography } from '@mui/material'
 import { grey } from '@mui/material/colors'
 
 interface Props {
@@ -9,13 +9,17 @@ const AgentAbilities = ({ abilities }: Props) => {
     return (
         <>
             {abilities?.map(ability =>
-                <Stack direction={'row'} spacing={4} marginY={2}>
-                    <img src={ability.displayIcon} height={30} width={80} style={{ objectFit: 'contain' }} />
-                    <Stack>
-                        <Typography variant='h6' color={grey[400]}>{ability.displayName}</Typography>
-                        <p>{ability.description}</p>
-                    </Stack>
-                </Stack>
+                <Grid container spacing={2} py={3}>
+                    <Grid item xs={12} sm={3} md={2} sx={{ display: 'flex', justifyContent: 'center' }}>
+                        <img src={ability.displayIcon} height={30} width={80} style={{ objectFit: 'contain' }} />
+                    </Grid>
+                    <Grid item xs={12} sm={9} md={10}>
+                        <Stack>
+                            <Typography variant='h6' color={grey[400]}>{ability.displayName}</Typography>
+                            <p>{ability.description}</p>
+                        </Stack>
+                    </Grid>
+                </Grid>
             )}
         </>
     )
