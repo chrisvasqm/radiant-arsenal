@@ -17,7 +17,7 @@ const AgentsPage = () => {
 
     if (error) return <p>{error.message}</p>
 
-    const sortedAgents = agents?.data.sort((a, b) => a.displayName.localeCompare(b.displayName))
+    const sortedAgents = agents?.data.sort((current, next) => current.displayName.localeCompare(next.displayName))
 
     return (
         <>
